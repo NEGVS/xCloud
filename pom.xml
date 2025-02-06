@@ -89,6 +89,11 @@
         <module>order-service</module>
         <module>product-service</module>
         <module>x-gateway</module>
+        <module>x-config</module>
+        <module>x-common</module>
+        <module>x-user</module>
+        <module>x-order</module>
+        <module>x-product</module>
     </modules>
     <packaging>pom</packaging>
     <!--  dependencies为所有子项目都可以使用的依赖-->

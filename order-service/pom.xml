@@ -39,6 +39,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.20</version>
         </dependency>
+<!--        通用配置-->
+        <dependency>
+            <groupId>xCloud</groupId>
+            <artifactId>x-config</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
     <!-- 项目构建插件-->

@@ -9,7 +9,6 @@
     </parent>
 
 
-    <groupId>xCloud</groupId>
     <artifactId>xStorge</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>xStorge</name>

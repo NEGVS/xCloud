@@ -2,11 +2,14 @@ package xCloud.service;
 
 import cn.hutool.json.JSONUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import xCloud.entity.XOrders;
 import xCloud.entity.XProducts;
 import xCloud.mapper.XOrderMapper;
+import xCloud.result.HttpStatusEnum;
+import xCloud.result.XResponseResult;
 
 /**
  *@Description
@@ -22,13 +25,15 @@ public class XOrderService
    @Autowired
    private RestTemplate restTemplate;
 
-   public XOrders selectOrderById( String orderId )
+   public ResponseEntity< XOrders > selectOrderById( String orderId )
    {
       XOrders xOrders = xOrderMapper.selectOrderById( orderId );
-      return xOrders;
+      //htt
+      Integer code = HttpStatusEnum.ERROR.getCode();
+      return ResponseEntity.ok( xOrders );
    }
 
-   public XOrders selectOrderRestTemplateById( String orderId )
+   public XResponseResult selectOrderRestTemplateById( String orderId )
    {
       XOrders xOrders = xOrderMapper.selectOrderById( orderId );
 
@@ -37,6 +42,6 @@ public class XOrderService
       XProducts forObject = restTemplate.getForObject( url, XProducts.class );
       System.out.println( "------remote--------" );
       System.out.println( JSONUtil.toJsonStr( forObject ) );
-      return xOrders;
+      return XResponseResult.success( xOrders );
    }
 }
