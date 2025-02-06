@@ -1,0 +1,36 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: XCloud
+    version: 1.0.0
+#    description: XCloud
+#    author: XCloud
+#    copyright: XCloud
+#    license: Apache-2.0
+#    copyright-url: https://github.com/XCloud-Team/XCloud
+#    copyright-license: https://github.com/XCloud-Team/XCloud/blob/master/LICENSE
+#    copyright-license-url: https://github.com/XCloud-Team/XCloud/blob/master/LICENSE
+  datasource:
+    driver-class-name:
+      mysql: com.mysql.cj.jdbc.Driver
+
+    url:
+      mysql: jdbc:mysql://127.0.0.1:3306/XCloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useServerPrepStmts=true&cachePrepStmts=true&prepStmtCacheSize=250&prepStmtCacheSqlLimit=2048&rewriteBatchedStatements=true&useCompression=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useLocalSession
+    type: com.alibaba.druid.pool.DruidDataSource
+xCloud:
+  description: XCloud
+  author: XCloud
+  copyright: XCloud
+  # 名称
+  name: XCloud
+  # 版本
+  version: 1.0.0
+  # 版权年份
+  copyrightYear: 2025
+  # 文件路径 示例（ ../XCloud/uploadPath，Linux配置 /home/XCloud/uploadPath）
+  profile: ../XCloud/uploadPath
+  # 获取ip地址开关
+  addressEnabled: false
+  # 验证码类型 math 数字计算 char 字符验证
+  captchaType: math

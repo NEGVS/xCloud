@@ -30,11 +30,15 @@
         <url/>
     </scm>
     <properties>
+
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
         <mybatis.version>3.0.3</mybatis.version>
+        <druid.version>1.1.22</druid.version>
     </properties>
-    <!-- 依赖声明 -->
+    <!-- 依赖声明 ，dependencyManagement只是声明依赖, 并不实现Jar包引入。
+    简而言之：只是控制依赖的版本，不会向子模块引入依赖。子模块中优先从这里获取依赖的版本（即如果子模块中的依赖已经在父项目中声明，那么子模块的依赖可以不写版本），
+    一般建议 优先在父项目声明依赖的版本，子项目中不在书写依赖版本，方便统一管理-->
     <dependencyManagement>
         <dependencies>
             <!-- SpringCloud 微服务 -->
@@ -96,6 +100,7 @@
         <module>x-product</module>
     </modules>
     <packaging>pom</packaging>
+
     <!--  dependencies为所有子项目都可以使用的依赖-->
     <dependencies>
         <dependency>
@@ -103,6 +108,78 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.2</version>
+        </dependency>
+        <!-- 阿里数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+            <!--            <version>1.1.22</version>-->
+        </dependency>
+
+        <!--引入swagger,对于只有一个HttpServletRequest参数的方法,如果参数小于5个，推荐使用 @ApiImplicitParams的方式单独封装每一个参数；如果参数大于5个，采用定义一个对象去封装所有参数的属性，然后使用@APiParam的方式
+            http://localhost:8081/swagger-ui.html#/-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.springfox</groupId>-->
+        <!--            <artifactId>springfox-swagger2</artifactId>-->
+        <!--            <version>2.7.0</version>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>io.springfox</groupId>-->
+        <!--            <artifactId>springfox-swagger-ui</artifactId>-->
+        <!--            <version>2.7.0</version>-->
+        <!--        </dependency>-->
+
+        <!--knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.20</version>
+        </dependency>
+        <!-- JSON工具类 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- 阿里JSON解析器 -->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.21</version>
+        </dependency>
+
+        <!-- Token生成与解析-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <!--常用工具类 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
