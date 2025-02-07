@@ -95,7 +95,7 @@ import java.util.zip.GZIPOutputStream;
  * java工具栏集合
  * 重点搜索加*
  * 例如
- * 时间相关，tiem*
+ * 时间相关，time*
  * list相关，list*
  * map相关，map*
  * 多线程相关，thread*
