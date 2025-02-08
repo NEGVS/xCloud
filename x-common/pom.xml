@@ -9,7 +9,16 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <artifactId>x-common</artifactId>
     <packaging>pom</packaging>
+    <description>xCloud-common general modules</description>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
         <module>x-common-core</module>
         <module>x-common-datascope</module>
@@ -21,71 +30,64 @@
         <module>x-common-swagger</module>
         <module>x-common-sensitive</module>
     </modules>
-    <artifactId>x-common</artifactId>
-    <description>xCloud-common general modules</description>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
-    <dependencies>
-        <!--general config-->
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-config</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+    <!--    <dependencies>-->
+    <!--        &lt;!&ndash;general config&ndash;&gt;-->
+    <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--&lt;!&ndash;            <groupId>xCloud</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;            <artifactId>x-config</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;            <version>0.0.1-SNAPSHOT</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-            <version>3.3.1</version>
-        </dependency>
+    <!--        <dependency>-->
+    <!--            <groupId>org.springframework.boot</groupId>-->
+    <!--            <artifactId>spring-boot-starter-webflux</artifactId>-->
+    <!--            <version>3.3.1</version>-->
+    <!--        </dependency>-->
 
-        <dependency>
-            <groupId>io.projectreactor.netty</groupId>
-            <artifactId>reactor-netty</artifactId>
-            <version>0.9.10.RELEASE</version>
-        </dependency>
-        <!--导入导出使用 简单-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>easyexcel</artifactId>
-            <version>3.3.3</version>
-        </dependency>
-        <!--导入导出使用 简单-->
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-spring-boot-starter</artifactId>
-            <version>4.2.0</version>
-        </dependency>
+    <!--        <dependency>-->
+    <!--            <groupId>io.projectreactor.netty</groupId>-->
+    <!--            <artifactId>reactor-netty</artifactId>-->
+    <!--            <version>0.9.10.RELEASE</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash;导入导出使用 简单&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>com.alibaba</groupId>-->
+    <!--            <artifactId>easyexcel</artifactId>-->
+    <!--            <version>3.3.3</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash;导入导出使用 简单&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>cn.afterturn</groupId>-->
+    <!--            <artifactId>easypoi-spring-boot-starter</artifactId>-->
+    <!--            <version>4.2.0</version>-->
+    <!--        </dependency>-->
 
-        <!--httpclient-->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version> <!-- 请使用最新的版本号 -->
-        </dependency>
+    <!--        &lt;!&ndash;httpclient&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.httpcomponents</groupId>-->
+    <!--            <artifactId>httpclient</artifactId>-->
+    <!--            <version>4.5.13</version> &lt;!&ndash; 请使用最新的版本号 &ndash;&gt;-->
+    <!--        </dependency>-->
 
-        <!-- ZXing Core 二维码生产使用，主要使用的库是 ZXing（Zebra Crossing），它是一个开源的二维码生成和解析库。-->
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
-            <version>3.4.1</version> <!-- 或者使用最新版本 -->
-        </dependency>
-        <!-- ZXing Java SE 二维码生产使用-->
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>javase</artifactId>
-            <version>3.4.1</version> <!-- 或者使用最新版本 -->
-        </dependency>
-        <!-- redis 缓存操作 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-    </dependencies>
+    <!--        &lt;!&ndash; ZXing Core 二维码生产使用，主要使用的库是 ZXing（Zebra Crossing），它是一个开源的二维码生成和解析库。&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>com.google.zxing</groupId>-->
+    <!--            <artifactId>core</artifactId>-->
+    <!--            <version>3.4.1</version> &lt;!&ndash; 或者使用最新版本 &ndash;&gt;-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash; ZXing Java SE 二维码生产使用&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>com.google.zxing</groupId>-->
+    <!--            <artifactId>javase</artifactId>-->
+    <!--            <version>3.4.1</version> &lt;!&ndash; 或者使用最新版本 &ndash;&gt;-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash; redis 缓存操作 &ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.springframework.boot</groupId>-->
+    <!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
+    <!--        </dependency>-->
+    <!--    </dependencies>-->
 
 </project>

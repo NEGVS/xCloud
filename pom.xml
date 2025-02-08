@@ -86,21 +86,14 @@
     </dependencyManagement>
 
     <modules>
-        <module>feign-seata</module>
-
-        <module>order-service</module>
-        <module>product-service</module>
-        <module>x-gateway</module>
-        <module>x-common</module>
         <module>x-api</module>
         <module>x-auth</module>
-        <module>x-api/x-api-system</module>
+        <module>x-gateway</module>
+        <module>x-common</module>
         <module>x-modules</module>
-        <module>x-modules/x-system</module>
-        <module>x-modules/x-gen</module>
-        <module>x-modules/x-job</module>
-        <module>x-modules/x-file</module>
         <module>x-visual</module>
+        <module>x-modules/x-order</module>
+        <module>x-modules/x-product</module>
     </modules>
     <packaging>pom</packaging>
 

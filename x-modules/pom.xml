@@ -10,11 +10,20 @@
     </parent>
 
     <artifactId>x-modules</artifactId>
+    <packaging>pom</packaging>
+    <description>x-modules business module</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <modules>
+        <module>x-system</module>
+        <module>x-file</module>
+        <module>x-job</module>
+        <module>x-gen</module>
+    </modules>
 
 </project>
