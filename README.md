@@ -1,5 +1,29 @@
 andy
 xCloud Project
+
+├── x-ui              // 前端框架 [80]
+├── x-gateway         // 网关模块 [8080]
+├── x-auth            // 认证中心 [9200]
+├── x-api             // 接口模块
+│       └── x-api-system                          // 系统接口
+├── x-common          // 通用模块
+│       └── x-common-core                         // 核心模块
+│       └── x-common-datascope                    // 权限范围
+│       └── x-common-datasource                   // 多数据源
+│       └── x-common-log                          // 日志记录
+│       └── x-common-redis                        // 缓存服务
+│       └── x-common-seata                        // 分布式事务
+│       └── x-common-security                     // 安全模块
+│       └── x-common-swagger                      // 系统接口
+├── x-modules         // 业务模块
+│       └── x-system                              // 系统模块 [9201]
+│       └── x-gen                                 // 代码生成 [9202]
+│       └── x-job                                 // 定时任务 [9203]
+│       └── x-file                                // 文件服务 [9300]
+├── x-visual          // 图形化管理模块
+│       └── x-visual-monitor                      // 监控中心 [9100]
+├──pom.xml                // 公共依赖
+
 模块
 1-订单服务 ✅
 2-商品服务 ✅

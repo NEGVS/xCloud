@@ -86,8 +86,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>xStorge</module>
-        <module>xOrder</module>
         <module>feign-seata</module>
 
         <module>order-service</module>
@@ -98,6 +96,9 @@
         <module>x-user</module>
         <module>x-order</module>
         <module>x-product</module>
+        <module>x-api</module>
+        <module>x-auth</module>
+        <module>x-api/x-api-system</module>
     </modules>
     <packaging>pom</packaging>
 

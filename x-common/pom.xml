@@ -9,7 +9,20 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <packaging>pom</packaging>
+    <modules>
+        <module>x-common-core</module>
+        <module>x-common-datascope</module>
+        <module>x-common-datasource</module>
+        <module>x-common-log</module>
+        <module>x-common-redis</module>
+        <module>x-common-seata</module>
+        <module>x-common-security</module>
+        <module>x-common-swagger</module>
+        <module>x-common-sensitive</module>
+    </modules>
     <artifactId>x-common</artifactId>
+    <description>xCloud-common general modules</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -18,7 +31,7 @@
     </properties>
 
     <dependencies>
-        <!--        通用配置-->
+        <!--general config-->
         <dependency>
             <groupId>xCloud</groupId>
             <artifactId>x-config</artifactId>
