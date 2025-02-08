@@ -1,5 +1,6 @@
 package xCloud;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -11,6 +12,7 @@ public class XGatewayApplication
 {
    public static void main( String[] args )
    {
-     XGatewayApplication.main( args );
+      System.out.println( "Hello XGatewayApplication !" );
+      SpringApplication.run( XGatewayApplication.class, args );
    }
 }

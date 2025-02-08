@@ -3,7 +3,6 @@ package xCloud.result;
 import lombok.Getter;
 
 @Getter
-
 public enum HttpStatusEnum
 {
    /**
@@ -85,4 +84,13 @@ public enum HttpStatusEnum
       this.message = message;
    }
 
+   public Integer getCode()
+   {
+      return code;
+   }
+
+   public String getMessage()
+   {
+      return message;
+   }
 }

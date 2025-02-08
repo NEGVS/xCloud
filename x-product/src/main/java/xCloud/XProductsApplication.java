@@ -1,14 +1,15 @@
-package xcloud.xorder;
+package xCloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class XOrderApplication
+public class XProductsApplication
 {
    public static void main( String[] args )
    {
-      SpringApplication.run( XOrderApplication.class, args );
-   }
+      System.out.println( "Hello XProductsApplication!" );
+      SpringApplication.run( XProductsApplication.class, args );
 
+   }
 }

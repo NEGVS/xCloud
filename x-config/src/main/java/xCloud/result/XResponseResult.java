@@ -1,14 +1,21 @@
 package xCloud.result;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * 自定义ResponseResult封装返回结果
  * RestController自动返回json
  */
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 //@Schema(name = "统一结果集处理")
-public class XResponseResult< T >
+public class XResponseResult< T > implements java.io.Serializable
 {
    /**
     * 状态码

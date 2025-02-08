@@ -8,6 +8,8 @@ public class XOrderApplication
 {
    public static void main( String[] args )
    {
+      System.out.println( "Hello XOrderApplication !" );
+
       SpringApplication.run( XOrderApplication.class, args );
    }
 }
