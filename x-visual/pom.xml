@@ -9,24 +9,16 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>x-product</artifactId>
+    <artifactId>x-visual</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>x-visual-monitor</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <dependencies>
-        <!--        通用配置-->
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-config</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+
 </project>

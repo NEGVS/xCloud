@@ -91,14 +91,16 @@
         <module>order-service</module>
         <module>product-service</module>
         <module>x-gateway</module>
-        <module>x-config</module>
         <module>x-common</module>
-        <module>x-user</module>
-        <module>x-order</module>
-        <module>x-product</module>
         <module>x-api</module>
         <module>x-auth</module>
         <module>x-api/x-api-system</module>
+        <module>x-modules</module>
+        <module>x-modules/x-system</module>
+        <module>x-modules/x-gen</module>
+        <module>x-modules/x-job</module>
+        <module>x-modules/x-file</module>
+        <module>x-visual</module>
     </modules>
     <packaging>pom</packaging>
 
