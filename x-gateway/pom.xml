@@ -18,19 +18,36 @@
     </properties>
     <dependencies>
 
-        <!-- SpringCloud Gateway -->
+        <!--1. 添加依赖 SpringCloud Gateway，在 pom.xml 中添加 Spring Cloud Gateway 的依赖：
+         -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
+            <version>3.1.2</version>
         </dependency>
 
-        <!-- SpringCloud Alibaba Nacos -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--&lt;!&ndash;            <version></version>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--  SpringCloud Alibaba Nacos ，如果需要与其他组件（如 Eureka、Nacos）集成，还需添加对应的依赖：-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2023.0.1.2</version>
+        </dependency>
 
     </dependencies>
-
+    <build>
+        <finalName>x-gateway</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

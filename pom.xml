@@ -94,6 +94,7 @@
         <module>x-visual</module>
         <module>x-modules/x-order</module>
         <module>x-modules/x-product</module>
+        <module>x-modules/x-andy</module>
     </modules>
     <packaging>pom</packaging>
 

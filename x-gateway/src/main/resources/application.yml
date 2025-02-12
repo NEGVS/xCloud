@@ -1,4 +1,64 @@
+#2. 配置文件，在 application.yml 或 application.properties 中配置 Gateway 的路由规则和其他功能。
+#  方式1，示例配置（基于路径的路由）：
+#server:
+#  port: 8080  # Gateway 服务端口
+#
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: user-service  # 路由 ID
+#          uri: http://localhost:8081  # 目标服务地址
+#          predicates:
+#            - Path=/user/**  # 匹配路径
+#          filters:
+#            - StripPrefix=1  # 去掉前缀（去掉 /user）
+#        - id: order-service
+#          uri: http://localhost:8082
+#          predicates:
+#            - Path=/order/**
+#          filters:
+#            - StripPrefix=1
+#方式2，示例配置（基于服务发现的路由）：如果使用了服务发现组件（如 Eureka 或 Nacos），可以通过服务名称进行路由：
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: user-service
+#          uri: lb://user-service  # lb:// 表示从服务发现中获取服务地址
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - StripPrefix=1
+#        - id: order-service
+#          uri: lb://order-service
+#          predicates:
+#            - Path=/order/**
+#          filters:
+#            - StripPrefix=1
 spring:
-  application:
-    name: XGateway
   cloud:
+    gateway:
+      routes:
+        - id: x-user
+          uri: lb://x-user
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+        - id: x-order
+          uri: lb://x-order
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
+            - name: retry
+              args:
+                retries: 3
+#                statuses: 500,502,503,504
+                statuses: BAD_GATEWAY
+#这些配置是什么意思？
+
+

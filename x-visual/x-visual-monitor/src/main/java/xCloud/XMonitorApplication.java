@@ -1,6 +1,6 @@
 package xCloud;
 
-public class Main
+public class XMonitorApplication
 {
    public static void main( String[] args )
    {

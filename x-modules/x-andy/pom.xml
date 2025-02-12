@@ -7,14 +7,11 @@
         <groupId>xCloud</groupId>
         <artifactId>xCloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>x-visual</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>x-visual-monitor</module>
-    </modules>
-    <description>x-visual Graphic management module</description>
+    <artifactId>x-andy</artifactId>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
