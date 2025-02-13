@@ -35,12 +35,25 @@
         <spring-cloud.version>2023.0.3</spring-cloud.version>
         <mybatis.version>3.0.3</mybatis.version>
         <druid.version>1.1.22</druid.version>
+        <spring-framework.version>5.3.33</spring-framework.version>
+        <tobato.version>1.27.2</tobato.version>
+        <poi.version>4.1.2</poi.version>
+
     </properties>
     <!-- 依赖声明 ，dependencyManagement只是声明依赖, 并不实现Jar包引入。
     简而言之：只是控制依赖的版本，不会向子模块引入依赖。子模块中优先从这里获取依赖的版本（即如果子模块中的依赖已经在父项目中声明，那么子模块的依赖可以不写版本），
     一般建议 优先在父项目声明依赖的版本，子项目中不在书写依赖版本，方便统一管理-->
     <dependencyManagement>
         <dependencies>
+            <!-- SpringFramework的依赖配置-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- SpringCloud 微服务 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -56,6 +69,18 @@
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>2023.0.1.2</version>
             </dependency>
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.1.5</version>
+            </dependency>
+            <!-- FastDFS 分布式文件系统 -->
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${tobato.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -69,12 +94,6 @@
                 <version>8.0.33</version>
             </dependency>
 
-            <!-- SpringBoot 依赖配置 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.1.5</version>
-            </dependency>
 
             <!-- pagehelper 分页插件 -->
             <dependency>
@@ -176,7 +195,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
         </dependency>
-
+        <!-- excel工具 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
