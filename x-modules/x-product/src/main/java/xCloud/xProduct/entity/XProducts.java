@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.data.annotation.Id;
 import xCloud.entity.BaseEntity;
 
 import java.math.BigDecimal;
@@ -37,7 +36,6 @@ public class XProducts extends BaseEntity
     * 方案二：自定义JSON配置类
     *
     * */
-   @Id
    @JsonFormat(shape = JsonFormat.Shape.STRING)
    @JsonSerialize(contentUsing = ToStringSerializer.class)
    @JsonIgnoreProperties(ignoreUnknown = true)

@@ -10,7 +10,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>x-order</artifactId>
+    <artifactId>x-financial</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -18,28 +18,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>xCloud</groupId>
             <artifactId>x-common-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-common-redis</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-financial</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>xCloud</groupId>
-            <artifactId>x-product</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
-
 </project>

@@ -114,6 +114,7 @@
         <module>x-modules/x-order</module>
         <module>x-modules/x-product</module>
         <module>x-modules/x-andy</module>
+        <module>x-modules/x-financial</module>
     </modules>
     <packaging>pom</packaging>
 
