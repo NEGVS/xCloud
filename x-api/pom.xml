@@ -11,7 +11,9 @@
     <modules>
         <module>x-api-system</module>
     </modules>
+
     <packaging>pom</packaging>
+
     <artifactId>x-api</artifactId>
 
     <description>x-api-system system interface</description>
