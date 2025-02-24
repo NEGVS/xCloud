@@ -18,12 +18,25 @@
     </properties>
 
     <dependencies>
+
+        <!-- SpringBoot Boot Redis -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.33.0</version>
+        </dependency>
+
         <!-- SpringBoot Boot Redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-
+        <!-- SpringBoot Boot jRedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.7.1</version>
+        </dependency>
         <!-- X Common Core-->
         <dependency>
             <groupId>xCloud</groupId>

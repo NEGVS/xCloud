@@ -69,12 +69,14 @@
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>2023.0.1.2</version>
             </dependency>
+
             <!-- SpringBoot 依赖配置 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>3.1.5</version>
             </dependency>
+
             <!-- FastDFS 分布式文件系统 -->
             <dependency>
                 <groupId>com.github.tobato</groupId>
