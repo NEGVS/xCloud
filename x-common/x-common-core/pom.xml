@@ -63,17 +63,17 @@
 
 
         <!-- SpringCloud Openfeign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--        </dependency>-->
 
         <!-- SpringCloud Loadbalancer -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-            <version>3.1.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
+<!--            <version>3.1.0</version>-->
+<!--        </dependency>-->
 
         <!-- Spring Context Support -->
         <dependency>
@@ -88,11 +88,11 @@
         </dependency>
 
         <!-- Transmittable ThreadLocal -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>transmittable-thread-local</artifactId>
-            <version>2.14.3</version> <!-- 请使用最新版本 -->
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>transmittable-thread-local</artifactId>-->
+<!--            <version>2.14.3</version> &lt;!&ndash; 请使用最新版本 &ndash;&gt;-->
+<!--        </dependency>-->
 
         <!-- Pagehelper -->
         <dependency>
@@ -125,10 +125,10 @@
         </dependency>
 
         <!-- Jaxb -->
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.xml.bind</groupId>-->
+<!--            <artifactId>jaxb-api</artifactId>-->
+<!--        </dependency>-->
 
         <!-- Apache Lang3 -->
         <dependency>
@@ -149,10 +149,10 @@
         </dependency>
 
         <!-- Java Servlet -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>javax.servlet-api</artifactId>-->
+<!--        </dependency>-->
 
     </dependencies>
 </project>

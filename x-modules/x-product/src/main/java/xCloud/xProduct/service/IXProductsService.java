@@ -1,6 +1,7 @@
 package xCloud.xProduct.service;
 
 
+import xCloud.entity.result.XResponseResult;
 import xCloud.xProduct.entity.XProducts;
 
 import java.util.List;

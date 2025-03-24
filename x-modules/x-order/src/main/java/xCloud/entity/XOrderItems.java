@@ -1,6 +1,5 @@
 package xCloud.entity;
 
-import cn.afterturn.easypoi.excel.annotation.Excel;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
